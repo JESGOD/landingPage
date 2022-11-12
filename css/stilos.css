@@ -99,7 +99,7 @@ body {
 /*fin pseudo clases*/
 .mostrar-menu-burger {
     transform: translate(0%);
-    
+
 }
 
 
@@ -170,7 +170,7 @@ body {
 
 .contenedor-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 300px 300px;
     grid-auto-rows: dense;
     column-gap: 25px;
@@ -188,7 +188,7 @@ body {
     cursor: pointer;
 }
 
-.imagen-light{ 
+.imagen-light {
     position: fixed;
     display: flex;
     background-color: rgba(0, 0, 0, 0.605);
@@ -198,27 +198,34 @@ body {
     left: 0;
     justify-content: center;
     align-items: center;
-    transform: translate(100%); /*traslada el lightbox fuera de la pantalla*/
-     
-   
-}
-.show-lightbox{
-    transition: transform .2s ease-in-out;
-    transform: translate(0); /*vuelve al su posicion original el lightbox(aparece en pantalla)*/
+    transform: translate(100%);
+    /*traslada el lightbox fuera de la pantalla*/
+
+
 }
 
-.agregar-imagen{
+.show-lightbox {
+    transition: transform .2s ease-in-out;
+    transform: translate(0);
+    /*vuelve al su posicion original el lightbox(aparece en pantalla)*/
+}
+
+.agregar-imagen {
     width: 60%;
     border-radius: 10px;
-    transform: scale(0);/* hace diminuta la imagen del lighbox por lo tanto desaparece*/
-    
-}
-.show-image-light{
-    transition: transform .3s .2s; /* la transformacion dura 3s  pero se ejecuta despues de haber pasado 2s*/
-    transform: scale(100%); /*regresa la imagen del lightbox a su tamaño original*/
+    transform: scale(0);
+    /* hace diminuta la imagen del lighbox por lo tanto desaparece*/
+
 }
 
-.close{
+.show-image-light {
+    transition: transform .3s .2s;
+    /* la transformacion dura 3s  pero se ejecuta despues de haber pasado 2s*/
+    transform: scale(100%);
+    /*regresa la imagen del lightbox a su tamaño original*/
+}
+
+.close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -226,6 +233,102 @@ body {
     cursor: pointer;
 }
 
-.hidde-icono-burger{
+.hidde-icono-burger {
     transform: translate(200%);
+}
+
+/*EXPERTOS*/
+.experts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expert {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img {
+    width: 80%;
+    display: block;
+    margin: 0% auto;
+}
+
+.n-expert {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+/*footer*/
+
+footer {
+    background-color: #9f8ad0;
+    padding-bottom: 0.1px;/*este padin se hace par que los margenes no se bugueen(colapso de margenes) */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0px 40px 0px;
+
+}
+
+.contact-us {
+    width: 50%;
+    color: white;
+    
+}
+
+.brand {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.contact-us p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+   
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    
+
+}
+
+.social-media-icon:hover {
+    background-color: white;
+    color: #764ba2;
+}
+
+.social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+}
+.line{
+    width: 90%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 60px; 
 }
