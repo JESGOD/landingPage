@@ -42,7 +42,7 @@ body {
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     box-shadow: 0 0 6px rgb(0, 0, .5);
     transition: transform 0.3s ease-in-out;
-    transform: translate(101%);
+    transform: translate(110%);
     z-index: 1;
 
 }
@@ -66,6 +66,7 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
+    text-align: center;
 
 }
 
@@ -181,6 +182,7 @@ body {
 }
 
 .contenedor-galeria img {
+    /*object-fit: cover;*/
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
@@ -211,6 +213,7 @@ body {
 }
 
 .agregar-imagen {
+    /*object-fit: cover;*/
     width: 60%;
     border-radius: 10px;
     transform: scale(0);
@@ -267,12 +270,13 @@ body {
 
 footer {
     background-color: #9f8ad0;
-    padding-bottom: 0.1px;/*este padin se hace par que los margenes no se bugueen(colapso de margenes) */
+    padding-bottom: 0.1px;
+    /*este padin se hace par que los margenes no se bugueen(colapso de margenes) */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 60px 0px 40px 0px;
@@ -282,7 +286,7 @@ footer {
 .contact-us {
     width: 50%;
     color: white;
-    
+
 }
 
 .brand {
@@ -298,7 +302,7 @@ footer {
     width: 50%;
     display: flex;
     justify-content: flex-end;
-   
+
 }
 
 .social-media-icon {
@@ -312,7 +316,7 @@ footer {
     border-radius: 50%;
     text-align: center;
     color: white;
-    
+
 
 }
 
@@ -325,10 +329,91 @@ footer {
     font-size: 30px;
     line-height: 60px;
 }
-.line{
+
+.line {
     width: 90%;
     margin: 0 auto;
     height: 2px;
     background-color: white;
     margin-bottom: 60px;
+}
+
+@media screen and (max-width:800px) { /*para pantallas desde 800 hasta 500px*/
+    .menu-navegacion {
+        width: 50vw;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    .contenedor-servicio img {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .checklist-servicio {
+        width: 80%;
+    }
+
+    .service {
+        margin-bottom: 30px;
+    }
+
+    .agregar-imagen {
+        width: 90%;
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: 150px 150px;
+    }
+    .cont-expert{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px) { /*para pantallas desde 500 hasta 300px*/
+    .menu-navegacion {
+        width: 60vw;
+    }
+    .icono-burger{
+        top:10px;
+        right: 5px;
+        
+    }
+    .titulo {
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .footer-content {
+    
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 0px 40px 0px;
+    
+    }
+    .social-media {
+        width: 60%;
+        justify-content: center;
+    
+    }
+    .contact-us{
+        width: 60%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .social-media-icon {
+        width: 40px;
+        height: 40px;
+       
+    }
+    .social-media-icon i {
+        margin-left: 2%;
+        line-height: 38px;
+        
+    }
 }
